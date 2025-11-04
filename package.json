@@ -1,3 +1,25 @@
+{
+  "name": "ci-cd-demo-app",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "node src/test.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "supertest": "^6.3.4"
+  }
+}
+js",
+    "build": "mkdir -p dist && cp -r public/* dist/"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+
 // {
   "name": "ci-cd-demo-app",
   "version": "1.0.0",
@@ -14,4 +36,5 @@
   "devDependencies": {
     "jest": "^29.7.0"
   }
+74e3518 (Update index.html)
 }
