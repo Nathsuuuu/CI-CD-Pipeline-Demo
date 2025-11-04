@@ -16,6 +16,11 @@ To **learn and implement** the fundamentals of DevOps automation by:
 ---
 
 ## 🧩 Project Overview
+<div align="center">
+  <img src="./CI_CDPipelineDemo.JPG" alt="CI/CD Pipeline Demo Screenshot" width="700"/>
+</div>
+
+
 
 This is a **basic web application** with a front-end (HTML/CSS) and a back-end built in **Node.js (Express.js)**.  
 The pipeline runs automatically every time I push changes — simulating a real-world CI/CD environment.
@@ -33,4 +38,5 @@ The pipeline runs automatically every time I push changes — simulating a real-
 | **PowerShell** | Local development and Git operations |
 
 ---
+
 
