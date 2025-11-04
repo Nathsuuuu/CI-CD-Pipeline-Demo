@@ -1,11 +1,19 @@
 const express = require('express');
+const path = require('path');
 const app = express();
+const PORT = process.env.PORT || 3000;
 
-// Define a simple route
-app.get('/', (req, res) => {
-  res.send('CI/CD Demo App is running!');
+// Serve all static files from the "public" folder
+app.use(express.static(path.join(__dirname, '../public')));
+
+// Health check endpoint
+app.get('/api/health', (req, res) => {
+  res.json({
+    status: 'OK',
+    message: 'CI/CD Demo App is running!'
+  });
 });
 
-app.listen(3000, () => {
-  console.log('App listening at http://localhost:3000');
+app.listen(PORT, () => {
+  console.log(`✅ App running at http://localhost:${PORT}`);
 });
