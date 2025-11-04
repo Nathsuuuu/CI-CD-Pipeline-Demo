@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,39 +13,17 @@
     <button onclick="checkHealth()">Check API Health</button>
     <div id="result"></div>
   </div>
-  <script>
-    async function checkHealth() {
-      const response = await fetch('/api/health');
-      const data = await response.json();
-      document.getElementById('result').innerHTML = `<p>Status: ${data.status}</p><p>Message: ${data.message}</p>`;
-    }
-  </script>
-</body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CI/CD Demo App</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="container">
-    <h1>🚀 CI/CD Pipeline Demo</h1>
-    <p>This app was automatically built, tested, and deployed using GitHub Actions!</p>
-    <p>CI/CD Test Update</p>
 
-    <button onclick="checkHealth()">Check API Health</button>
-    <div id="result"></div>
-  </div>
   <script>
     async function checkHealth() {
-      const response = await fetch('/api/health');
-      const data = await response.json();
-      document.getElementById('result').innerHTML = `<p>Status: ${data.status}</p><p>Message: ${data.message}</p>`;
+      try {
+        const response = await fetch('/api/health');
+        const data = await response.json();
+        document.getElementById('result').innerHTML = `<p>Status: ${data.status}</p><p>Message: ${data.message}</p>`;
+      } catch (error) {
+        document.getElementById('result').innerHTML = `<p style="color:red;">Error: API not reachable</p>`;
+      }
     }
   </script>
 </body>
->>>>>>> 74e3518 (Update index.html)
 </html>
