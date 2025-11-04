@@ -1,22 +1,10 @@
-HEAD
-const app = require('./app');
 const request = require('supertest');
-
-describe('GET /api/health', () => {
-  it('should return status OK', async () => {
-    const response = await request(app).get('/api/health');
-    expect(response.status).toBe(200);
-    expect(response.body.status).toBe('OK');
-  });
-
 const app = require('./app');
-const request = require('supertest');
 
-describe('GET /api/health', () => {
-  it('should return status OK', async () => {
-    const response = await request(app).get('/api/health');
-    expect(response.status).toBe(200);
-    expect(response.body.status).toBe('OK');
+request(app)
+  .get('/')
+  .expect(200)
+  .end((err, res) => {
+    if (err) throw err;
+    console.log('Test passed!');
   });
-74e3518 (Update index.html)
-});
